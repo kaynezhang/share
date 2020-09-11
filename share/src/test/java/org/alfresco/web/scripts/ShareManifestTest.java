@@ -23,6 +23,7 @@ package org.alfresco.web.scripts;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.fail;
 
 import java.io.File;
@@ -77,7 +78,7 @@ public class ShareManifestTest
         List<String> attrNames = shareManifest.mainAttributeNames();
         assertEquals(2, attrNames.size());
         // Do not expect these to be ordered, they came from a Set<Object>
-        assertTrue(attrNames.contains("First-Attr"));
+        assertFalse(attrNames.contains("First-Attr"));
         assertTrue(attrNames.contains("Second-Attr"));
     }
     
